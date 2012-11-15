@@ -1,10 +1,12 @@
+#*******************************************************************************************************************************
 #		__________                  .__   __          
 #		\______   \ _______  ______ |  |_/  |_  ______
 #		 |       _// __ \  \/ /  _ \|  |\   __\/  ___/
 #		 |    |   \  ___/\   (  <_> )  |_|  |  \___ \ 
 #		 |____|_  /\___  >\_/ \____/|____/__| /____  >
 #		        \/     \/                          \/ 
-#										i3 - config
+#						i3 - config
+#*******************************************************************************************************************************
 
 # VAR
 	set $mod Mod4
@@ -42,13 +44,11 @@ bar {
 	}
 } 
 
-# Titulos ##xfontsel
+# fonte titulos ##xfontsel
 	font -*-clean-medium-*-normal-*-*-120-*-*-*-*-iso8859-*
-
 # borda padrao [normal|none|1pixel]
 	new_window normal
-
-# cores							border    bckgrnd    text
+# cores				border    bckgrnd    text
 	client.focused             #1793D0   #1793D0    #000000
 	client.focused_inactive    #000000   #242424    #888888
 	client.unfocused           #000000   #242424    #888888
@@ -59,7 +59,6 @@ bar {
 	bindsym $mod+h split h
 	bindsym $mod+v split v	
 	
-# fullscreen
 	bindsym $mod+f fullscreen
 
 # layout <stacking|tabbed|default>
@@ -67,7 +66,7 @@ bar {
 	bindsym $mod+w layout tabbed
 	bindsym $mod+e layout default
 
-# janelas <focus|move>
+# janelas/workspaces <focus|move>
 	bindsym $mod+Left focus left
 	bindsym $mod+Down focus down
 	bindsym $mod+Up focus up
@@ -78,8 +77,6 @@ bar {
 	bindsym $mod+Shift+Right move right
 	bindsym $mod+Shift+space floating toggle
 	bindsym $mod+space focus mode_toggle
-
-# workspace <focus|move>
 	bindsym $mod+1 workspace $1
 	bindsym $mod+2 workspace $2
 	bindsym $mod+3 workspace $3
@@ -105,7 +102,11 @@ bar {
 	bind Mod4+Ctrl+83 workspace prev_on_output
 	bind Mod4+Ctrl+85 workspace next_on_output
 
+
+#*******************************************************************************************************************************
 # Atalhos # ver codigos: xmodmap -pke
+#*******************************************************************************************************************************
+
 	bindsym $mod+Return exec xterm
 	bindsym $mod+Shift+Q kill
 	bindsym $mod+d exec dmenu_run
@@ -120,7 +121,10 @@ bar {
 	bindcode Mod4+Ctrl+80 exec mate-panel
 	bindcode Mod4+Ctrl+84 exec killall mate-panel
 
-# Inicia com o i3
+#*******************************************************************************************************************************
+# executado junto com o i3
+#*******************************************************************************************************************************
+
 ## para o computador:
 	exec nm-applet
 	exec mate-volume-control-applet
@@ -128,19 +132,25 @@ bar {
 ## todos
 	exec nitrogen --restore &
 	# exec conky -c ~/.i3/conkyrc &
-	# exec conky -c ~/.i3/init_conky &
+	exec conky -c ~/.i3/init_conky &
 	exec setxkbmap -model abnt2 -layout br -variant abnt2
 
+#*******************************************************************************************************************************
 # regras para as janelas # ver codigos: xprop
-# flutuante:
+#*******************************************************************************************************************************
+
+# floating
 	for_window [class="^Sakura$" instance="^sakura$"] floating enable
 	for_window [class="^Caja$" instance="^caja$"] floating enable
+
 # transferencia de arquivos / opcoes skype >> flutuante
 	for_window [title="Transferências de Arquivo" class="^Skype$" instance="^skype$"] floating enable
 	for_window [title="Opções" class="^Skype$" instance="^skype$"] floating enable	
+
 # chromium sem bordas
 	for_window [class="^Chromium$" instance="^chromium$"] border none
-# area de trabalho inicial
+
+# definindo workspace inicial para as janelas
 	assign [class="^Geany$" instance="^geany$"] $8
 	assign [class="^jd-Main$" instance="^sun-awt-X11-XFramePeer$"] $9
 	assign [class="^Transmission-gtk$" instance="^transmission-gtk$"]  $9
