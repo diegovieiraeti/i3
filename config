@@ -28,8 +28,8 @@
 
 # i3 bar
 bar {
-#	status_command i3status
-	status_command conky
+	status_command i3status
+#	status_command conky
 	position          top
 	mode              dock
 	workspace_buttons yes
