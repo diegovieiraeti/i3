@@ -28,7 +28,7 @@
 
 # i3 bar
 bar {
-	status_command i3status
+	status_command i3status -c ~/.i3/i3status.conf
 #	status_command conky
 	position          top
 	mode              dock
@@ -152,5 +152,5 @@ bar {
 
 # definindo workspace inicial para as janelas
 	assign [class="^Geany$" instance="^geany$"] $8
-	assign [class="^jd-Main$" instance="^sun-awt-X11-XFramePeer$"] $9
-	assign [class="^Transmission-gtk$" instance="^transmission-gtk$"]  $9
+	assign [class="^jd-Main$" instance="^sun-awt-X11-XFramePeer$"] $0
+	assign [class="^Transmission-gtk$" instance="^transmission-gtk$"]  $0
