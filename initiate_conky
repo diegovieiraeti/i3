@@ -1,0 +1,104 @@
+# Conky configuration
+# Edited by Izobalax 2009
+
+# set to yes if you want Conky to be forked in the background
+background yes
+
+# Use Xft?
+use_xft yes
+
+# Xft font when Xft is enabled
+xftfont Terminus:size=9
+
+# Text alpha when using Xft
+xftalpha 0.8
+
+# Update interval in seconds
+update_interval 5.0
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Create own window instead of using desktop (required in nautilus)
+own_window no
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# Minimum size of text area
+minimum_size 900 24
+maximum_width 1024
+
+# Draw shades?
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders no
+draw_graph_borders yes
+
+# Stippled borders?
+stippled_borders 0
+
+# border margins
+border_margin 0
+
+# border width
+border_width 0
+
+# Default colors and also border colors
+default_color white
+default_shade_color black
+default_outline_color white
+
+# own window options
+own_window		yes
+own_window_transparent	yes
+own_window_type		override
+own_window_hints	undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Text alignment, other possible values are commented
+#alignment top_left
+alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+
+# Gap between borders of screen and text
+# same thing as passing -x at command line
+gap_x
+gap_y 24
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+
+# set to yes if you want all text to be in uppercase
+uppercase none
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# number of net samples to average
+# set to 1 to disable averaging
+net_avg_samples 2
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale no
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer no
+
+TEXT
+#${font Clean:size=7}$alignr Kernel $kernel - Uptime $uptime
+#${hr}
+${font Clean:size=8}$alignr HDD (root) ${fs_used_perc /}% (${fs_used /}/${fs_size /}) - HDD (home) ${fs_used_perc /home}% (${fs_used /home}/${fs_size /home}) - MEN $memperc% ($mem/$memmax)
+# - SWP ${swapperc}% (${swap}/${swapmax}) - BAT ${battery_percent}%
+${font Clean:size=8}$alignr Kernel $kernel - Uptime $uptime - CPU $cpu% - $processes processos
+# - IP ${addr eth0}
+#${time %A, %d de %B de %Y - %R}
+#${font Clean:size=7}${color #EAEAEA}${goto 10}CPU${goto 40}${cpubar 3,100}${goto 180}HDD (root) ${fs_used_perc /}%${goto 266}${fs_bar 3,100 /}${goto 410}MEM${goto 440}${membar 3,100}${goto 580}BAT ${battery_percent}%${goto 628}${battery_bar 3,100}
+#${font Clean:size=7}${color #EAEAEA}${goto 10}$cpu%${goto 40}$processes processos${goto 180}HDD (home)${fs_used_perc /home}%${goto 266}${fs_bar 3,100 /home}${goto 410}$memperc%${goto 440}$mem/$memmax${goto 580}SWP ${swapperc}%${goto 628}${swapbar 3,100}
+
