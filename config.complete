@@ -6,6 +6,7 @@
 #		        \/     \/                          \/ 
 #										i3 - config
 
+
 # Define tecla especial e nome das areas de trabalho
 	set $mod Mod4
 	set $1 1:
