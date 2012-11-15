@@ -120,16 +120,16 @@ bar {
 	bindcode Mod4+Ctrl+80 exec mate-panel
 	bindcode Mod4+Ctrl+84 exec killall mate-panel
 
-# Inicia software junto com o i3
+# Inicia com o i3
 ## para o computador:
-exec nm-applet
-exec mate-volume-control-applet
-exec mate-power-manager
-## outros
-exec nitrogen --restore &
-#exec conky -c ~/.i3/conkyrc &
-#exec conky -c ~/.i3/initiate_conky &
-exec setxkbmap -model abnt2 -layout br -variant abnt2
+	exec nm-applet
+	exec mate-volume-control-applet
+	exec mate-power-manager
+## todos
+	exec nitrogen --restore &
+	# exec conky -c ~/.i3/conkyrc &
+	# exec conky -c ~/.i3/initiate_conky &
+	exec setxkbmap -model abnt2 -layout br -variant abnt2
 
 # regras para as janelas # ver codigos: xprop
 # flutuante:
