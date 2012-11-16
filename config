@@ -29,7 +29,7 @@
 # i3 bar
 bar {
 	status_command i3status -c ~/.i3/i3status.conf
-#	status_command conky
+#	status_command conky -c ~/.i3/conkyrc
 	position          top
 	mode              dock
 	workspace_buttons yes
@@ -117,6 +117,8 @@ bar {
 	bindcode Mod4+Ctrl+54 exec chromium
 	bindcode Mod4+Ctrl+39 exec skype
 	bindcode Mod4+Ctrl+33 exec pidgin
+
+#on pc ->
 	bindcode Mod4+Ctrl+41 exec caja --no-desktop
 	bindcode Mod4+Ctrl+80 exec mate-panel
 	bindcode Mod4+Ctrl+84 exec killall mate-panel
@@ -125,13 +127,8 @@ bar {
 # executado junto com o i3
 #*******************************************************************************************************************************
 
-## para o computador:
-	exec nm-applet
-	exec mate-volume-control-applet
-	exec mate-power-manager
-## todos
+	exec volumeicon
 	exec nitrogen --restore &
-	# exec conky -c ~/.i3/conkyrc &
 	exec conky -c ~/.i3/init_conky &
 	exec setxkbmap -model abnt2 -layout br -variant abnt2
 

@@ -1,1 +1,1 @@
-Os arquivos config e init_conky devem ficar dentro do diretorio ~/.i3/
+Os arquivos devem ficar dentro do diretorio ~/.i3/
