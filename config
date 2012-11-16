@@ -48,6 +48,8 @@ bar {
 	font -*-clean-medium-*-normal-*-*-120-*-*-*-*-iso8859-*
 # borda padrao [normal|none|1pixel]
 	new_window normal
+	bindsym $mod+t border toggle
+
 # cores				border    bckgrnd    text
 	client.focused             #1793D0   #1793D0    #000000
 	client.focused_inactive    #000000   #242424    #888888
