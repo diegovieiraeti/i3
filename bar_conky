@@ -4,10 +4,6 @@ total_run_times 0
 update_interval 1
 
 TEXT
-#${font Clean:size=8}
-#Kernel $kernel - Uptime $uptime - CPU $cpu% - $processes processos - 
-#HDD (root) ${fs_used_perc /}% (${fs_used /}/${fs_size /}) - \
-#HDD (home) ${fs_used_perc /home}% (${fs_used /home}/${fs_size /home}) - 
-#MEN $memperc% ($mem/$memmax) - IP ${addr eth0} - \
 ${font Clean:size=8}${time %A, %d de %B de %Y - %R}
+
 
