@@ -24,12 +24,12 @@
 # i3 session
 	bindsym $mod+Shift+C reload
 	bindsym $mod+Shift+R restart
-	bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Sair do i3?' -b 'Sim, sair do i3' 'i3-msg exit'"
+	bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Sair do i3?' -b 'Sair do i3' 'i3-msg exit'"
 
 # i3 bar
 bar {
-	status_command i3status -c ~/.i3/i3status.conf
-#	status_command conky -c ~/.i3/conkyrc
+#	status_command i3status -c ~/.i3/i3status.conf
+	status_command conky -c ~/.i3/bar_conky
 	position          top
 	mode              dock
 	workspace_buttons yes
