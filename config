@@ -145,7 +145,8 @@ bar {
 # transferencia de arquivos / opcoes skype >> flutuante
 	for_window [title="Transferências de Arquivo" class="^Skype$" instance="^skype$"] floating enable
 	for_window [title="Opções" class="^Skype$" instance="^skype$"] floating enable	
-
+	for_window [title="Chamada com" class="^Skype$" instance="^skype$"] floating enable	
+	
 # chromium sem bordas
 	for_window [class="^Chromium$" instance="^chromium$"] border none
 
