@@ -115,21 +115,23 @@ bar {
 	
 #26 = e #54 = c #39 = s #33 = p #41 = f
 #80 = 8 teclado numerico #84 = 5 teclado numerico
-	bindcode Mod4+Ctrl+26 exec evince
+	bindcode Mod4+Ctrl+26 exec epdfview
 	bindcode Mod4+Ctrl+54 exec chromium
 	bindcode Mod4+Ctrl+39 exec skype
 	bindcode Mod4+Ctrl+33 exec pidgin
 
-#on pc ->
+#on pc -> <provisorio>
 	bindcode Mod4+Ctrl+41 exec caja --no-desktop
 	bindcode Mod4+Ctrl+80 exec mate-panel
 	bindcode Mod4+Ctrl+84 exec killall mate-panel
+	for_window [class="^Caja$" instance="^caja$"] floating enable
 
 #*******************************************************************************************************************************
 # executado junto com o i3
 #*******************************************************************************************************************************
 
 	exec volumeicon
+	exec batti
 	exec nitrogen --restore &
 	exec conky -c ~/.i3/init_conky &
 	exec setxkbmap -model abnt2 -layout br -variant abnt2
@@ -140,17 +142,14 @@ bar {
 
 # floating
 	for_window [class="^Sakura$" instance="^sakura$"] floating enable
-	for_window [class="^Caja$" instance="^caja$"] floating enable
-
-# transferencia de arquivos / opcoes skype >> flutuante
 	for_window [title="Transferências de Arquivo" class="^Skype$" instance="^skype$"] floating enable
 	for_window [title="Opções" class="^Skype$" instance="^skype$"] floating enable	
 	for_window [title="Chamada com" class="^Skype$" instance="^skype$"] floating enable	
 	
-# chromium sem bordas
+# border none
 	for_window [class="^Chromium$" instance="^chromium$"] border none
 
-# definindo workspace inicial para as janelas
+# default workspace
 	assign [class="^Geany$" instance="^geany$"] $8
 	assign [class="^jd-Main$" instance="^sun-awt-X11-XFramePeer$"] $0
 	assign [class="^Transmission-gtk$" instance="^transmission-gtk$"]  $0
