@@ -99,10 +99,12 @@ bar {
 	bindsym $mod+Shift+asterisk move workspace $8
 	bindsym $mod+Shift+parenleft move workspace $9
 	bindsym $mod+Shift+parenright move workspace $0
-#	#com Mod4+</> #bind Mod4+Ctrl+59 workspace prev_on_output #bind Mod4+Ctrl+60 workspace next_on_output
+#	#com Mod4+</> #
+bind Mod4+Ctrl+59 workspace prev_on_output
+bind Mod4+Ctrl+60 workspace next_on_output
 #	# setas numerico <- ->
-	bind Mod4+Ctrl+83 workspace prev_on_output
-	bind Mod4+Ctrl+85 workspace next_on_output
+#	bind Mod4+Ctrl+83 workspace prev_on_output
+#	bind Mod4+Ctrl+85 workspace next_on_output
 
 
 #*******************************************************************************************************************************
