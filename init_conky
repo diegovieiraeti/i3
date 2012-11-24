@@ -41,13 +41,9 @@ override_utf8_locale no
 use_spacer no
 
 TEXT
-#${font Clean:size=7}$alignr Kernel $kernel - Uptime $uptime
-#${hr}
-${font Clean:size=10}$alignr HDD (root) ${fs_used_perc /}% (${fs_used /}/${fs_size /}) - HDD (home) ${fs_used_perc /home}% (${fs_used /home}/${fs_size /home}) - MEN $memperc% ($mem/$memmax)
+${font Clean:size=10}$alignr HDD (root) ${fs_used_perc /}% (${fs_used /}/${fs_size /}) - HDD (home) ${fs_used_perc /home}% (${fs_used /home}/${fs_size /home}) - HDD (bkp) ${fs_used_perc /bkp}% (${fs_used /bkp}/${fs_size /bkp}) - MEN $memperc% ($mem/$memmax)
 # - SWP ${swapperc}% (${swap}/${swapmax}) - BAT ${battery_percent}%
-$alignr Kernel $kernel - Uptime $uptime - CPU $cpu% - $processes processos
-# - IP ${addr eth0}
-#${time %A, %d de %B de %Y - %R}
+$alignr Kernel $kernel - Uptime $uptime - CPU $cpu% - $processes processos - IP ${addr eth0}
 #${font Clean:size=7}${color #EAEAEA}${goto 10}CPU${goto 40}${cpubar 3,100}${goto 180}HDD (root) ${fs_used_perc /}%${goto 266}${fs_bar 3,100 /}${goto 410}MEM${goto 440}${membar 3,100}${goto 580}BAT ${battery_percent}%${goto 628}${battery_bar 3,100}
 #${font Clean:size=7}${color #EAEAEA}${goto 10}$cpu%${goto 40}$processes processos${goto 180}HDD (home)${fs_used_perc /home}%${goto 266}${fs_bar 3,100 /home}${goto 410}$memperc%${goto 440}$mem/$memmax${goto 580}SWP ${swapperc}%${goto 628}${swapbar 3,100}
 
