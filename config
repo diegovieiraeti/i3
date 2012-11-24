@@ -33,7 +33,8 @@ bar {
 	position          top
 	mode              dock
 	workspace_buttons yes
-	font -*-clean-medium-*-normal-*-*-120-*-*-*-*-iso8859-*
+	font -misc-ubuntu condensed-medium-*-*-*-17-100-*-100-*-0-iso8859-9
+#	font -*-clean-medium-*-normal-*-*-120-*-*-*-*-iso8859-*
 	colors {
 		background #242424
 		statusline #FFFFFF
@@ -45,6 +46,7 @@ bar {
 } 
 
 # fonte titulos ##xfontsel
+#	font -misc-ubuntu mono-medium-normal-*-*-*-120-*-*-m-*-iso8859-9
 	font -*-clean-medium-*-normal-*-*-120-*-*-*-*-iso8859-*
 # borda padrao [normal|none|1pixel]
 	new_window normal

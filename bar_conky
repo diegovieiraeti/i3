@@ -4,6 +4,6 @@ total_run_times 0
 update_interval 1
 
 TEXT
-${font Clean:size=8}${time %A, %d de %B de %Y - %R}
+${time %A, %d de %B de %Y - %R}
 
 
