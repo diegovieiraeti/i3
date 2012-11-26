@@ -113,7 +113,7 @@ bind Mod4+Ctrl+60 workspace next_on_output
 # Atalhos # ver codigos: xmodmap -pke
 #*******************************************************************************************************************************
 
-	bindsym $mod+Return exec xterm
+	bindsym $mod+Return exec sakura
 	bindsym $mod+Shift+Q kill
 	bindsym $mod+d exec dmenu_run
 	
