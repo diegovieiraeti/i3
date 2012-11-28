@@ -1,13 +1,13 @@
 # Conky configuration
 background yes
 use_xft yes
-xftfont ubuntu:size=8
+xftfont ubuntu:size=10
 xftalpha 0.8
 update_interval 5.0
 total_run_times 0
 #own_window no
 double_buffer yes
-minimum_size 900 24
+minimum_size 800 24
 maximum_width 1024
 draw_shades yes
 draw_outline no
@@ -18,7 +18,7 @@ border_margin 0
 border_width 0
 default_color white
 default_shade_color black
-default_outline_color white
+default_outline_color grey
 own_window		yes
 own_window_transparent	yes
 own_window_type		override
@@ -29,7 +29,7 @@ alignment top_right
 #alignment bottom_left
 #alignment bottom_right
 
-gap_x 26
+gap_x 6
 gap_y 22
 
 
@@ -37,19 +37,35 @@ no_buffers yes
 uppercase none
 cpu_avg_samples 2
 net_avg_samples 2
-override_utf8_locale no
+override_utf8_locale yes
 use_spacer no
 
 TEXT
-$alignr Kernel $kernel - Uptime $uptime - CPU $cpu% - $processes processos - IP ${if_up wlan0}${addr wlan0} ${wireless_essid wlan0} ${wireless_link_qual wlan0}%${endif}${if_up eth0}${addr eth0}${endif} - ${tcp_portmon 1 65535 count} conexoes
-$alignr HDD (root) ${fs_used_perc /}% (${fs_used /}/${fs_size /}) - HDD (home) ${fs_used_perc /home}% (${fs_used /home}/${fs_size /home}) - HDD (bkp) ${fs_used_perc /bkp}% (${fs_used /bkp}/${fs_size /bkp})
-$alignr MEN $memperc% ($mem/$memmax) - SWP ${swapperc}% (${swap}/${swapmax})
+$alignr ${color grey}Kernel${color} $kernel${color grey} uptime${color} $uptime ${color grey}processos${color} $processes ${color grey}IP${color} ${if_up wlan0}${addr wlan0} ${wireless_essid wlan0} ${wireless_link_qual wlan0}%${endif}${if_up eth0}${addr eth0}${endif} ${color grey} conexões${color} ${tcp_portmon 1 65535 count} ${color grey}CPU${color} $cpu% ${color grey}MEN${color} $memperc% ${color grey}SWP${color} ${swapperc}% ${color grey}HDD [ /${color} ${fs_used_perc /}% ${color grey}/home${color} ${fs_used_perc /home}% ${color grey}/bkp${color} ${fs_used_perc /bkp}%${color grey} ]${color}
+
+#1
+#$alignr Kernel $kernel - Uptime $uptime - CPU $cpu% - $processes processos - IP ${if_up wlan0}${addr wlan0} ${wireless_essid wlan0} ${wireless_link_qual wlan0}%${endif}${if_up eth0}${addr eth0}${endif} - ${tcp_portmon 1 65535 count} conexões
+#$alignr HDD (root) ${fs_used_perc /}% (${fs_used /}/${fs_size /}) - HDD (home) ${fs_used_perc /home}% (${fs_used /home}/${fs_size /home}) - HDD (bkp) ${fs_used_perc /bkp}% (${fs_used /bkp}/${fs_size /bkp})
+#$alignr MEN $memperc% ($mem/$memmax) - SWP ${swapperc}% (${swap}/${swapmax})
+
+#antigo
 # - BAT ${battery_percent}%
 #$alignr Kernel $kernel - Uptime $uptime - CPU $cpu% - $processes processos - IP ${addr eth0}
 #${font Clean:size=7}${color #EAEAEA}${goto 10}CPU${goto 40}${cpubar 3,100}${goto 180}HDD (root) ${fs_used_perc /}%${goto 266}${fs_bar 3,100 /}${goto 410}MEM${goto 440}${membar 3,100}${goto 580}BAT ${battery_percent}%${goto 628}${battery_bar 3,100}
 #${font Clean:size=7}${color #EAEAEA}${goto 10}$cpu%${goto 40}$processes processos${goto 180}HDD (home)${fs_used_perc /home}%${goto 266}${fs_bar 3,100 /home}${goto 410}$memperc%${goto 440}$mem/$memmax${goto 580}SWP ${swapperc}%${goto 628}${swapbar 3,100}
 
-#${offset 240}${color slate blue}${time %a,}${color}${time %e %B %G}
+#2
+#$alignr ${color slate grey}Kernel${color} $kernel${color slate grey} uptime${color} $uptime \
+${color slate grey}processos${color} $processes \
+${color slate grey}IP${color} ${if_up wlan0}${addr wlan0} ${wireless_essid wlan0} ${wireless_link_qual wlan0}%${endif} \
+${if_up eth0}${addr eth0}${endif} ${color slate grey} \
+conexões${color} ${tcp_portmon 1 65535 count} ${color slate grey}CPU${color} $cpu% \
+${color slate grey}MEN${color} $memperc% ($mem/$memmax) ${color slate grey}SWP${color} ${swapperc}% (${swap}/${swapmax}) \
+HDD [ ${color slate grey}/${color} ${fs_used_perc /}% (${fs_used /}/${fs_size /}) ${color slate grey}/home${color} ${fs_used_perc /home}% (${fs_used /home}/${fs_size /home}) ${color slate grey}/bkp${color} ${fs_used_perc /bkp}% (${fs_used /bkp}/${fs_size /bkp}) ]
+
+
+
+
 
 #${offset 240}${color slate grey}Highest CPU:
 #${offset 240}${color #ddaa00} ${top name 1}${top_mem cpu 1}
