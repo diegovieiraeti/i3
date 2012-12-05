@@ -136,6 +136,7 @@ bind Mod4+Ctrl+60 workspace next_on_output
 
 	exec volumeicon
 	exec batti
+	exrc dropboxd
 	exec nitrogen --restore &
 	exec conky -c ~/.i3/init_conky &
 	exec setxkbmap -model abnt2 -layout br -variant abnt2
