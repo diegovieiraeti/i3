@@ -45,7 +45,13 @@ bar {
 	}
 } 
 
+# dual monitor
 	force_xinerama yes
+## on ~/.xinitrc 
+##   xrandr --output LVDS1 --mode 1024x600
+##   xrandr --output VGA1 --below LVDS1 --mode 1280x1024
+##   exec i3
+
 
 # fonte titulos ##xfontsel
 #	font -misc-ubuntu mono-medium-normal-*-*-*-120-*-*-m-*-iso8859-9
