@@ -45,6 +45,8 @@ bar {
 	}
 } 
 
+	force_xinerama yes
+
 # fonte titulos ##xfontsel
 #	font -misc-ubuntu mono-medium-normal-*-*-*-120-*-*-m-*-iso8859-9
 	font -*-clean-medium-*-normal-*-*-120-*-*-*-*-iso8859-*
