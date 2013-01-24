@@ -17,8 +17,8 @@
 	set $5 5:
 	set $6 6:
 	set $7 7:
-	set $8 8:edit
-	set $9 9: 
+	set $8 8:docs
+	set $9 9:midia
 	set $0 10:downs 
 
 # i3 session
@@ -161,8 +161,14 @@ bind Mod4+Ctrl+60 workspace next_on_output
 	
 # border none
 	for_window [class="^Chromium$" instance="^chromium$"] border none
+	for_window [class="^Evince$" instance="^evince$"] border none
+	for_window [class="^Clementine$" instance="^clementine$"] border none
+	for_window [class="^Smplayer$" instance="^smplayer$"] border none
 
 # default workspace
 	assign [class="^Geany$" instance="^geany$"] $8
+	assign [class="^Evince$" instance="^evince$"] $8
+	assign [class="^Clementine$" instance="^clementine$"] $9
+	assign [class="^Smplayer$" instance="^smplayer$"] $9
 	assign [class="^jd-Main$" instance="^sun-awt-X11-XFramePeer$"] $0
 	assign [class="^Transmission-gtk$" instance="^transmission-gtk$"]  $0
