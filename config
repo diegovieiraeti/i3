@@ -127,7 +127,8 @@ bind Mod4+Ctrl+60 workspace next_on_output
 	
 #26 = e #54 = c #39 = s #33 = p #41 = f
 #80 = 8 teclado numerico #84 = 5 teclado numerico
-	bindcode Mod4+Ctrl+26 exec epdfview
+	bindcode Mod4+Ctrl+26 exec evince
+	bindcode Mod4+Ctrl+32 exec okular  
 	bindcode Mod4+Ctrl+54 exec chromium
 	bindcode Mod4+Ctrl+39 exec skype
 	bindcode Mod4+Ctrl+33 exec pidgin
@@ -162,12 +163,14 @@ bind Mod4+Ctrl+60 workspace next_on_output
 # border none
 	for_window [class="^Chromium$" instance="^chromium$"] border none
 	for_window [class="^Evince$" instance="^evince$"] border none
+	for_window [class="^Okular$" instance="^okular$"] border none
 	for_window [class="^Clementine$" instance="^clementine$"] border none
 	for_window [class="^Smplayer$" instance="^smplayer$"] border none
 
 # default workspace
 	assign [class="^Geany$" instance="^geany$"] $8
 	assign [class="^Evince$" instance="^evince$"] $8
+	assign [class="^Okular$" instance="^okular$"] $8
 	assign [class="^Clementine$" instance="^clementine$"] $9
 	assign [class="^Smplayer$" instance="^smplayer$"] $9
 	assign [class="^jd-Main$" instance="^sun-awt-X11-XFramePeer$"] $0

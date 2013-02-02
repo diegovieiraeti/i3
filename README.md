@@ -5,7 +5,7 @@ instalados:
 
 software		função
 
-epdfview		leitor pdf
+evince / okular		leitor pdf
 
 feh			visualizador de imagens
 
